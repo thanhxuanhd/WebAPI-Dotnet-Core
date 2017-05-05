@@ -49,11 +49,13 @@ namespace WebApi
             Mapper.Initialize(x =>
                 x.AddProfile<DomainToDtoMapingProfile>()
             );
+            services.AddCors(options => options.AddPolicy("AllowCors",
+                            builder =>{builder.AllowAnyOrigin().WithMethods("GET", "PUT", "POST", "DELETE").AllowAnyHeader();}));
             // Add framework services.
             services.AddMvc().AddJsonOptions(opts =>
             {
                 opts.SerializerSettings.ContractResolver = new DefaultContractResolver();
-            }); ;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
