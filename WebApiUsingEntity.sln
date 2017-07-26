@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{5D1696DC-69C7-4756-B9DC-64DF786FEC18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{5D1696DC-69C7-4756-B9DC-64DF786FEC18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{9354BC2D-B269-4EE5-9547-25F3836238FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{9354BC2D-B269-4EE5-9547-25F3836238FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{CCACBE7F-93F8-45A5-9577-61E4402CC08A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{CCACBE7F-93F8-45A5-9577-61E4402CC08A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestService", "UnitTestService\UnitTestService.csproj", "{04BD95F9-4AFA-42BF-BD5F-CF848E2008DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{CCACBE7F-93F8-45A5-9577-61E4402CC08A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCACBE7F-93F8-45A5-9577-61E4402CC08A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCACBE7F-93F8-45A5-9577-61E4402CC08A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04BD95F9-4AFA-42BF-BD5F-CF848E2008DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04BD95F9-4AFA-42BF-BD5F-CF848E2008DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04BD95F9-4AFA-42BF-BD5F-CF848E2008DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04BD95F9-4AFA-42BF-BD5F-CF848E2008DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
