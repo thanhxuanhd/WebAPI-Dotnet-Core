@@ -83,8 +83,13 @@ namespace Service.DataContracts
 
         public StudentViewModel GetById(int studentId)
         {
-            var studentEntitie = _studentRepository.AllIncluding(x => x.Enrollments).Where(x => x.StudentID == studentId).FirstOrDefault();
-            var student = Mapper.Map<Student, StudentViewModel>(studentEntitie);
+            var studentEntity = _studentRepository
+                .AllIncluding(x => x.Enrollments).Where(x => x.StudentID == studentId).FirstOrDefault();
+            if (studentEntity == null)
+            {
+                throw new Exception("Student Not Found");
+            }
+            var student = Mapper.Map<Student, StudentViewModel>(studentEntity);
             return student;
         }
     }

@@ -1,18 +1,26 @@
-﻿using Data;
+﻿using AutoMapper;
+using Data;
 using Microsoft.EntityFrameworkCore;
+using Service.Mapping;
 
 namespace UnitTestService.Service
 {
     public abstract class ServiceBaseTest
     {
-        protected readonly SchoolContext DbContext;
+        protected readonly SchoolContext _dbContext;
 
         public ServiceBaseTest()
         {
             //Memory DB
             var optionsBuilder = new DbContextOptionsBuilder<SchoolContext>();
             optionsBuilder.UseInMemoryDatabase();
-            DbContext = new SchoolContext(optionsBuilder.Options);
+            _dbContext = new SchoolContext(optionsBuilder.Options);
+            SchoolDbInitializer.Initialize(_dbContext);
+
+            //Setup Mapper
+            Mapper.Initialize(x =>
+               x.AddProfile<DomainToDtoMapingProfile>()
+           );
 
             this.Setup();
         }

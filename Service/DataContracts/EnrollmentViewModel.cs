@@ -1,10 +1,7 @@
-﻿namespace Service.DataContracts
-{
-    public enum Grade
-    {
-        A, B, C, D, F
-    }
+﻿using Data.Domain;
 
+namespace Service.DataContracts
+{
     public class EnrollmentViewModel : BaseDto
     {
         public int EnrollmentID { get; set; }

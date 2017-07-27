@@ -2,7 +2,7 @@
 
 namespace Service.DataContracts
 {
-    internal class CourseViewModel : BaseDto
+    public class CourseViewModel : BaseDto
     {
         public CourseViewModel()
         {
